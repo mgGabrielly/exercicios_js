@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercícios 01 - JavaScript</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <section>
+        <h2>01) Utilize JavaScript para alterar o valor do atributo src (source) de uma imagem.</h2>
+        <p>Implemente a função trafficLight() para alterar a imagem do semáforo. </p>
+        <form>
+            <input type="radio" id="off_light" name="traffic_light" onclick="trafficLight()"value="Desligado" checked>
+            <label for="off_light">Sinal Desligado</label><br>
+            <input type="radio" id="red_light" name="traffic_light" onclick="trafficLight('red')" value="Vermelho">
+            <label for="red_light">Sinal Vermelho</label><br>
+            <input type="radio" id="yellow_light" name="traffic_light" onclick="trafficLight('yellow')" value="Amarelo">
+            <label for="yellow_light">Sinal Amarelo</label><br>
+            <input type="radio" id="green_light" name="traffic_light" onclick="trafficLight('green')" value="Verde">
+            <label for="green_light">Sinal Verde</label><br>
+        </form>
+        <img id="img_traffic_light" src="img/all_off_light.png">
+    </section>
+    <section>
+        <h2>02) Utilize JavaScript para converter temperatura de Graus Celcius <strong>ºC</strong> 
+            para Graus Fahrenheit  <strong>ºF</strong> o Índice de Massa Corporal (IMC).</h2>
+        <p>Fórmula para converter Calcius paraFahrenheit:</p>
+        <img src="img/c-to-f-formula.png" alt="Fórmula para converter Graus Celcius para Graus Fahrenheit">
+        <form>
+            <label for="inputCelcius">Graus Celcius(ºC):</label><br>
+            <input type="number" id="inputCelcius" name="inputCelcius"  min="0" step=".01"  value="0" required  onchange="toFahrenheit()"><br>
+            <label for="inputFahrenheit">Graus Fahrenheit(ºF)</label><br>
+            <input type="number" id="inputFahrenheit" name="inputFahrenheit"  min="32" step=".01" value="32" required onchange="toCelcius()"><br>
+        </form>
+    </section>
+    <section>
+        <h2>03) Utilize JavaScript para calcular o Índice de Massa Corporal (IMC).</h2>
+        <p>Essa é a forma  mais popular para avaliar a  adiposidade corporal. A conta é simples: divida o peso em quilogramas
+            pela altura em metros  elevada ao quadrado. Ou seja, kg/m2, <strong>Para adultos</strong>, é considerado 
+            sobrepeso se o IMC for maior ou igual a 25. </p>
+        <form>
+            <label for="inputAltura">Altura(m):</label><br>
+            <input type="number" id="inputAltura" name="inputAltura"  min="0" max="2.50" step=".01"  required ><br>
+            <label for="inputPeso">Peso(kg):</label><br>
+            <input type="number" id="inputPeso" name="inputPeso"  min="0" max="300" step=".01"  required ><br>
+            <br>
+            <input type="button" value="Calcular" onclick="imc()"><br>
+            <br>
+            <label for="inputIMC">IMC:</label><br>
+            <input type="text" id="inputIMC" name="inputIMC" disabled><br>
+        </form>
+        <table>
+            <tbody>
+                <tr>
+                    <th>IMC</th>
+                    <td>Menor que 18,5</td>
+                    <td>Entre 18,5 e 24,9</td>
+                    <td>Entre 25 e 29,9</td>
+                    <td>Entre 30 e 39,9</td>
+                    <td>Maior ou igual a 40</td>
+                </tr>
+                <tr>
+                    <th>Classificação</th>
+                    <td class="regular">Abaixo do peso</td>
+                    <td class="bom">Normal</td>
+                    <td class="regular">Sobrepeso</td>
+                    <td class="ruim">Obesidade</td>
+                    <td class="pessimo">Obesidade grave</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+    <script src="js/exercicios01.js"></script>
+</body>
+</html>
