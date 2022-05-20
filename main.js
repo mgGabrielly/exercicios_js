@@ -1,12 +1,12 @@
 //Semáforo
-function trafficLight() {
-    if(document.getElementById('red_light').value=='Vermelho') {
+function trafficLight(onclick){
+    if(onclick=='red'){
         document.getElementById('img_traffic_light').src="img/red_light.png";
-    }
-    else if(document.getElementById('yellow_light').value=='Amarelo') {
+    } else if(onclick=='yellow'){
         document.getElementById('img_traffic_light').src="img/yellow_light.png";
-    }
-    else {
+    } else if(onclick=='green'){
+        document.getElementById('img_traffic_light').src="img/green_light.png";
+    } else {
         document.getElementById('img_traffic_light').src="img/all_off_light.png";
     }
 }
